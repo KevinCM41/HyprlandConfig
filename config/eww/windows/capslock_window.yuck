@@ -1,0 +1,20 @@
+(defwindow capslock-popup
+  :monitor 0
+  :geometry (geometry :x "1132px"
+                      :y "600px"
+                      :width "200px"
+                      :height "80px"
+                      )
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (box :class "capslock-container"
+       :orientation "v"
+       :space-evenly false
+       :spacing 10
+    (box :class "capslock-icon"
+         :halign "center"
+      "⇪")
+    (label :class "capslock-text"
+           :text "Caps Lock"
+           :halign "center")))

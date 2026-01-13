@@ -1,0 +1,123 @@
+* {
+    font: "JetBrainsMono Nerd Font 10";
+    
+    /* Color palette matching Wofi */
+    bg-color: rgba(22, 22, 29, 0.5);
+    fg-color: #FFFFFFFF;
+    border-color: rgba(34, 34, 46, 0.5);
+    input-bg: rgba(31, 31, 44, 0.6);
+    input-focus: #5a5c68;
+    selected-bg: rgba(209, 209, 236, 0.1);
+    /*selected-fg: #1e1e2e;*/
+    placeholder-color:rgb(173, 173, 173);
+    
+    /* Spacing */
+    element-padding: 10px;
+    element-spacing: 10px;
+    border-radius: 8px;
+}
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "";
+    drun-display-format: "{name}";
+    sidebar-mode: 			true;
+    
+    /* Enable animations */
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+window {
+    transparency: "real";
+    width: 680px;
+    height: 580px;
+    border-radius: 20px;
+    background-color: @bg-color;
+    border: 2px solid;
+    border-color: @border-color;
+    padding: 5px;
+}
+
+mainbox {
+    	children:                       [ inputbar, listview ];
+    	spacing:                       	2%;
+    	padding:                        2% 1% 0% 1%;
+}
+
+inputbar {
+    children: ["entry"];
+    spacing: 0px;
+    background-image: url("~/Pictures/Wallpapers/aston_blurred_v2.jpg", width);  // Your image path
+    background-color: @input-bg;
+    border-radius: @border-radius;
+    padding: 30px 80px 100px 80px;  // Top padding pushes search down
+    margin: 10px;
+}
+
+entry {
+    placeholder: "Search";
+    text-color: @fg-color;
+    placeholder-color: @placeholder-color;
+    background-color: @input-bg;  // Keep this for the search box itself
+    border-radius: @border-radius;
+    padding: 8px;
+}
+
+prompt {
+    enabled: false;
+}
+
+listview {
+    columns: 4;
+    lines: 3;
+    layout: vertical;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px solid;
+    spacing: 5px;
+    margin: 5px 10px 10px 10px;
+    dynamic: true;
+}
+
+element {
+    spacing: 10px;
+    orientation: vertical;
+    padding: @element-padding;
+    border: 0px solid;
+    border-radius: @border-radius;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: @selected-bg;
+    text-color: @selected-fg;
+}
+
+element-icon {
+    	size:                           48px;
+    	horizontal-align:	 	0.5;
+}
+
+element-text {
+    	expand:                         true;
+    	horizontal-align:               0.5;
+    	vertical-align:                 0.5;
+    	margin:                         0.5% 0.5% -0.5% 0.5%;
+}

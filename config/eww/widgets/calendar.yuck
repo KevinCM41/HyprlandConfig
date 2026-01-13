@@ -1,0 +1,29 @@
+(defwidget calendar-widget []
+  (box
+    :class "calendar-box"
+    :orientation "vertical"
+    :space-evenly false
+    :halign "center"
+
+    ;; Time + date container
+    (box
+      :class "time-box"
+      :orientation "vertical"
+      :halign "center"
+      :space-evenly false
+
+      ;; Live time
+      (label :text now-time :class "time-label")
+
+      ;; Date
+      (label :text today-date :class "calendar-title")
+    )
+
+    ;; Calendar
+    (box
+      :class "calendar-inner"
+      :halign "center"
+      (calendar :class "cal")
+    )
+  )
+)

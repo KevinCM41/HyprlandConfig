@@ -1,0 +1,17 @@
+;; Define the window
+(defwindow web-nav-window
+  :monitor 0
+  :geometry (geometry 
+    :x "20px" 
+    :y "20px" 
+    :width "200px" 
+    :height "180px"
+    :anchor "top left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "dock"
+  :wm-ignore false
+  :focusable false
+  (eventbox :onhoverlost "eww close web-nav-window"
+  
+  (web-nav-widget)))

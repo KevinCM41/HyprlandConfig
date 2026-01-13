@@ -1,0 +1,13 @@
+(defwindow weather
+  :monitor 0
+  :geometry (geometry :x "28px" :y "480px" :width "700px" :height "200px")
+  :stacking "bottom"
+  :windowtype "desktop"
+  (weather-widget))
+
+(defwindow weather-info
+  :monitor 0
+  :geometry (geometry :x "80px" :y "659px" :width "450px" :height "50px")
+  :stacking "bottom"
+  :windowtype "desktop"
+  (weather-widget-info))

@@ -1,0 +1,19 @@
+font_family      FiraCode Nerd Font
+bold_font        auto
+italic_font      auto
+font_size        12.0
+# foreground      #d0d0d0
+# background      #23232c
+# cursor          #f8f8f2
+# color0          #1c1c1c
+# color1          #ff5555
+# color2          #50fa7b
+...
+background_opacity 0.85
+
+include ~/.config/kitty/themes/catppuccin-mocha.conf
+
+# BEGIN_KITTY_THEME
+# Adapta Nokto Maia
+include current-theme.conf
+# END_KITTY_THEME

@@ -1,0 +1,78 @@
+;; Main music widget with all features
+(defwidget music [] 
+  (box :class "music-container" 
+       :orientation "vertical" 
+       :space-evenly false 
+       :spacing 12 
+    ;; Player name tag
+    (box :class "player-tag-container"
+         :halign "center"
+      (label :class "player-tag"
+             :text "♪ ${music-player} ♪"))
+    ;; Album Art
+    (box :class "art-container" 
+         :halign "center" 
+      (image :class "album-art" 
+             :path music-art 
+             :image-width 150 
+             :image-height 150)) 
+    ;; Track Info
+    (box :class "track-info" 
+         :orientation "vertical" 
+         :spacing 4 
+         :halign "center" 
+      (label :class "track-title" 
+             :text music-title
+             :limit-width 30 
+             :wrap true) 
+      (label :class "track-artist" 
+             :text music-artist
+             :limit-width 30 
+             :wrap true)) 
+    ;; Progress Section
+    (box :class "progress-section" 
+         :orientation "vertical" 
+         :spacing 6 
+      ;; Progress Bar
+      (scale :class "progress-bar" 
+             :value music-position-sec
+             :min 0 
+             :max music-length-sec
+             :onchange "playerctl -p YoutubeMusic position {}s" 
+             :width 240 
+             :height 6) 
+      ;; Time Display
+      (label :class "time-display" 
+             :text "${music-position} / ${music-length}" 
+             :halign "center")) 
+    ;; Volume Section
+;;   (box :class "volume-section"
+;;        :orientation "vertical"
+;;        :spacing 4
+;;     (box :class "volume-header"
+;;          :orientation "horizontal"
+;;          :halign "center"
+;;          :spacing 6
+;;       (label :class "volume-icon" :text "")
+;;       (label :class "volume-label" :text "${music-volume}%"))
+;;     (scale :class "volume-slider"
+;;            :value music-volume
+;;            :min 0
+;;            :max 100
+;;            :onchange "~/.config/eww/scripts/set-volume.sh {}"
+;;            :width 200
+;;            :height 4))
+    ;; Controls
+    (box :class "controls" 
+         :orientation "horizontal" 
+         :halign "center" 
+         :spacing 8 
+      (button :class "control-btn prev" 
+              :onclick "playerctl -p YoutubeMusic previous" 
+              "⏮") 
+      (button :class "control-btn play-pause" 
+              :onclick "playerctl -p YoutubeMusic play-pause" 
+              {music-status == "Playing" ? "⏸" : "▶"}) 
+      (button :class "control-btn next" 
+              :onclick "playerctl -p YoutubeMusic next" 
+              "⏭"))))

@@ -1,0 +1,16 @@
+#custom-ai{
+    /*background-color: #3c3c59;*/
+    color: #ffffff;
+    padding: 4px 6px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 16px;
+    opacity: 1;
+/*    transition: background-color 0.3s ease, opacity 0.3s ease; */
+}
+
+#custom-ai:hover {
+    background-color: #15c599;
+    color: #fff;
+    opacity: 1;
+}

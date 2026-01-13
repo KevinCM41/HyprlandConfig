@@ -1,0 +1,11 @@
+#network {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}

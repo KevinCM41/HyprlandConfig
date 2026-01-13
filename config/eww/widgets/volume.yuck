@@ -1,0 +1,60 @@
+;; Volume Control Widget
+(defwidget volume-control []
+  (box :class "volume-container"
+       :orientation "vertical"
+       :space-evenly false
+       :spacing 12
+    ;; Header
+    (box :class "volume-header"
+         :orientation "horizontal"
+         :halign "center"
+      (label :class "volume-title" :text "Volume Control"))
+    
+    ;; System Volume Section
+    (box :class "volume-section"
+         :orientation "vertical"
+         :spacing 8
+      (box :class "volume-label-row"
+           :orientation "horizontal"
+           :space-evenly false
+        (label :class "volume-icon" :text " ")
+        (label :class "volume-text" :text " Media")
+        (box :halign "end" :hexpand true
+          (label :class "volume-percent" :text "${system-volume}%")))
+      (scale :class "volume-slider output"
+             :value system-volume
+             :min 0
+             :max 101
+             :onchange "pactl set-sink-volume @DEFAULT_SINK@ {}%"
+             :width 250
+             :height 6))
+    
+    ;; Microphone Volume Section
+    (box :class "volume-section"
+         :orientation "vertical"
+         :spacing 8
+      (box :class "volume-label-row"
+           :orientation "horizontal"
+           :space-evenly false
+        (label :class "volume-icon" :text " ")
+        (label :class "volume-text" :text " Mic")
+        (box :halign "end" :hexpand true
+          (label :class "volume-percent" :text "${mic-volume}%")))
+      (scale :class "volume-slider input"
+             :value mic-volume
+             :min 0
+             :max 101
+             :onchange "pactl set-source-volume @DEFAULT_SOURCE@ {}%"
+             :width 250
+             :height 6))
+    
+;; Pavucontrol Button
+    (box :class "control-section"
+         :halign "center"
+      (button :class "pavucontrol-btn"
+              :onclick "pavucontrol &"
+        (box :orientation "vertical"
+             :spacing 6
+             :halign "center"
+             :valign "center"
+          (label :text "Audio Settings"))))))

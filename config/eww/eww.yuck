@@ -1,0 +1,30 @@
+;; ======================
+;; Core
+;; ======================
+(include "core/variables.yuck")
+
+;; ======================
+;; Widgets
+;; ======================
+(include "widgets/calendar.yuck")
+(include "widgets/music.yuck")
+(include "widgets/performance.yuck")
+(include "widgets/weather.yuck")
+(include "widgets/webnav.yuck")
+(include "widgets/brightness.yuck")
+(include "widgets/power.yuck")
+(include "widgets/volume.yuck")
+
+;; ======================
+;; Windows
+;; ======================
+(include "windows/calendar_window.yuck")
+(include "windows/music_window.yuck")
+(include "windows/performance_window.yuck")
+(include "windows/weather_window.yuck")
+(include "windows/webnav_window.yuck")
+(include "windows/brightness_window.yuck")
+(include "windows/power_window.yuck")
+(include "windows/capslock_window.yuck")
+(include "windows/volume_window.yuck")
+(include "windows/media_window.yuck")

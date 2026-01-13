@@ -1,0 +1,23 @@
+/*#tray:hover {
+    background-color: #6d6d94;
+    opacity: 1;
+}*/
+
+#tray {
+/*    background-color: #3c3c59; */
+    background-color: rgba(229, 240, 255, 0.15);
+    opacity: 1;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}

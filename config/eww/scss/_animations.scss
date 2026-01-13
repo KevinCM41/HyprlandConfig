@@ -1,0 +1,21 @@
+@keyframes slide-down {
+  from {
+    margin-top: -40px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    font-size: 50px;
+    opacity: 0;
+  }
+  to {
+    font-size: 70px;
+    opacity: 1;
+  }
+}

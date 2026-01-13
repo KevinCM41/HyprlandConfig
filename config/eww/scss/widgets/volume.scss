@@ -1,0 +1,90 @@
+.volume-container {
+  background: $bg-glass;
+  border-radius: $radius-lg;
+  padding: 16px;
+  border: 2px solid $accent;
+}
+
+.volume-header {
+  margin-bottom: 8px;
+}
+
+.volume-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #cdd6f4;
+}
+
+.volume-section {
+  padding: 8px;
+  background: rgba(49, 50, 68, 0.5);
+  border-radius: 8px;
+}
+
+.volume-label-row {
+  margin-bottom: 6px;
+}
+
+.volume-icon {
+  font-size: 18px;
+  color: #89b4fa;
+  margin-right: 4px;
+}
+
+.volume-text {
+  font-size: 13px;
+  color: #cdd6f4;
+  font-weight: 500;
+}
+
+.volume-percent {
+  font-size: 12px;
+  color: #a6adc8;
+  font-family: JetBrains Mono, monospace;
+}
+
+.volume-slider {
+  trough {
+    min-height: 6px;
+    border-radius: 3px;
+    background: rgba(49, 50, 68, 0.8);
+  }
+  
+  highlight {
+    border-radius: 3px;
+  }
+  
+  &.output highlight {
+    background: linear-gradient(90deg, #89b4fa, #b4befe);
+  }
+  
+  &.input highlight {
+    background: linear-gradient(90deg, #f38ba8, #fab387);
+  }
+  
+  slider {
+    min-width: 14px;
+    min-height: 14px;
+    border-radius: 50%;
+    background: #cdd6f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.control-section {
+  margin-top: 4px;
+}
+
+.pavucontrol-btn {
+  background: rgba(137, 180, 250, 0.2);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #cdd6f4;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: rgba(137, 180, 250, 0.5);
+    border-color: rgba(137, 180, 250, 0.5);
+  }
+}

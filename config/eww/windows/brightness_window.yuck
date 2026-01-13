@@ -1,0 +1,12 @@
+(defwindow brightness-window
+  :monitor 0
+  :geometry (geometry :x "20px"
+                      :y "390px"
+                      :width "307px"
+                      :height "70px"
+                      :anchor "top left")
+  :stacking "bottom"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "desktop"
+  :wm-ignore false
+  (brightness-control))

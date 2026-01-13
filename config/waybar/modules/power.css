@@ -1,0 +1,16 @@
+#custom-power:hover {
+    background-color: red;
+    opacity: 1;
+}
+
+#custom-power {
+    font-size: 16px;
+    margin-left: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #ffffff;
+/*    background-color: #3c3c59; */
+    border-radius: 7px;
+    opacity: 1;
+/*    transition: background-color 0.3s ease, opacity 0.3s ease; */
+}

@@ -1,0 +1,39 @@
+(defwidget web-nav-widget []
+  (box 
+    :orientation "vertical" 
+    :class "web-nav-container"
+    :space-evenly false
+    :spacing 8
+    
+    
+    (box 
+      :orientation "vertical"
+      :spacing 8
+      :class "button-container"
+      
+      (button
+        :class "nav-button claude-button"
+        :onclick "xdg-open https://claude.ai &"
+        (box
+          :orientation "horizontal"
+          :spacing 8
+          :halign "center"
+          (label :text "Claude.ai")))
+      
+      (button
+        :class "nav-button chatgpt-button"
+        :onclick "xdg-open https://chatgpt.com &"
+        (box
+          :orientation "horizontal"
+          :spacing 8
+          :halign "center"
+          (label :text "ChatGPT")))
+      
+      (button
+        :class "nav-button perplexity-button"
+        :onclick "xdg-open https://www.perplexity.ai &"
+        (box
+          :orientation "horizontal"
+          :spacing 8
+          :halign "center"
+          (label :text "Perplexity"))))))

@@ -1,0 +1,33 @@
+;; x "900px" y "20px" width "400px" height "140px"
+
+(defwindow perf-popup
+  :monitor 0
+  :geometry (geometry :x "1022px" :y "20px" :width "280px" :height "140px" :anchor "top left")
+  :stacking "bg"
+  :exclusive false
+  (perf-widget)
+)
+
+(defwindow cpu-window
+  :monitor 0
+  :geometry (geometry :x "1070px" :y "46px" :width "32px" :height "32px")
+  :stacking "bottom"
+  :exclusive false
+  (CPU-widget)
+)
+
+(defwindow ram-window
+  :monitor 0
+  :geometry (geometry :x "1166px" :y "46px" :width "32px" :height "32px")
+  :stacking "bottom"
+  :exclusive false
+  (RAM-widget)
+)
+
+(defwindow gpu-window
+  :monitor 0
+  :geometry (geometry :x "1262px" :y "46px" :width "32px" :height "32px")
+  :stacking "bottom"
+  :exclusive false
+  (GPU-widget)
+)

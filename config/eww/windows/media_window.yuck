@@ -1,0 +1,64 @@
+(defwindow mute-popup
+  :monitor 0
+  :geometry (geometry :x "1132px"
+                      :y "600px"
+                      :width "200px"
+                      :height "80px")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (box :class "media-container"
+       :orientation "v"
+       :space-evenly false
+       :spacing 10
+    (box :class "media-icon"
+         :halign "center"
+      "🔇")
+    (label :class "media-text"
+           :text "Muted"
+           :halign "center")))
+
+(defwindow unmute-popup
+  :monitor 0
+  :geometry (geometry :x "1132px"
+                      :y "600px"
+                      :width "200px"
+                      :height "80px")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (box :class "media-container"
+       :orientation "v"
+       :space-evenly false
+       :spacing 10
+    (box :class "media-icon"
+         :halign "center"
+      "🔊")
+    (label :class "media-text"
+           :text "Unmuted"
+           :halign "center")))
+
+(defwindow mic-mute-popup
+  :monitor 0
+  :geometry (geometry :x "1132px"
+                      :y "600px"
+                      :width "200px"
+                      :height "80px")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (box :class "media-container"
+       :orientation "v"
+       :space-evenly false
+       :spacing 10
+    (box :class "media-icon"
+         :halign "center"
+      "🎤")
+    (label :class "media-text"
+           :text "${mic-status}"
+           :halign "center")))
+
+;; ======================
+;; Media Popups
+;; ======================
+(defvar mic-status "Mic Muted")

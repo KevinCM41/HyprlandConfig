@@ -1,0 +1,24 @@
+{
+  "position": "bottom",
+  "orientation": "horizontal",
+  "iconSize": 48,
+  "alwaysVisible": false,
+  "showIconsBackground": true,
+  "showTooltips": true,
+  "falloff": 3,
+  "scaleFactor": 0.3,
+  "damp": 1,
+  "items": [
+    "Steam",
+    "Visual Studio Code",
+    "Zen Browser",
+    "Minecraft Launcher",
+    "Bitwig Studio",
+    "YouTube Music",
+    "VLC media player",
+    "Discord",
+    "Thunderbird Mail",
+    "OBS Studio",
+    "Obsidian"
+  ]
+}

@@ -1,0 +1,9 @@
+tooltip {
+    background-color: rgba(21, 21, 32, 1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f8f8f2;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+    background-clip: padding-box;
+}

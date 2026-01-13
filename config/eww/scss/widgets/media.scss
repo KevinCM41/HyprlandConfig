@@ -1,0 +1,17 @@
+.media-container {
+  background-color: $bg-glass;
+  border-radius: $radius-md;
+  padding: 15px 20px;
+  border: 2px solid $accent;
+}
+
+.media-icon {
+  font-size: 32px;
+  color: $text-main;
+}
+
+.media-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-main;
+}

@@ -1,0 +1,14 @@
+; Power menu window (popup)
+(defwindow power-menu-window
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "840px"
+                      :height "200px"
+                      :anchor "center center")
+  :transition "scale_in"
+  :stacking "overlay"
+  :exclusive false
+  :focusable true
+  :windowtype "dialog"
+  (power-menu))

@@ -1,0 +1,49 @@
+; Power button widget
+(defwidget power-button []
+  (box :class "power-card"
+       :orientation "v"
+       :space-evenly false
+    (button :onclick "eww open power-menu-window"
+            :class "power-icon"
+      "⏻")))
+; Power menu widget
+(defwidget power-menu []
+  (box :class "power-menu"
+       :orientation "h"
+       :space-evenly true
+       :spacing 20
+    (eventbox :class "power-option shutdown-option"
+              :onclick "systemctl poweroff"
+      (box :orientation "v"
+           :space-evenly false
+           :halign "center"
+           :valign "center"
+        (label :class "option-icon" :text "")
+        ))
+
+    (eventbox :class "power-option reboot-option"
+              :onclick "systemctl reboot"
+      (box :orientation "v"
+           :space-evenly false
+           :halign "center"
+           :valign "center"
+        (label :class "option-icon" :text "")
+        ))
+
+    (eventbox :class "power-option logout-option"
+              :onclick "hyprctl dispatch exit"
+      (box :orientation "v"
+           :space-evenly false
+           :halign "center"
+           :valign "center"
+        (label :class "option-icon" :text "󰗽")
+        ))
+
+    (eventbox :class "power-option sleep-option"
+              :onclick "systemctl suspend"
+      (box :orientation "v"
+           :space-evenly false
+           :halign "center"
+           :valign "center"
+        (label :class "option-icon" :text "󰤄")
+        ))))

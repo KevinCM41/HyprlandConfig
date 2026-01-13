@@ -1,0 +1,42 @@
+.power-option {
+  background: $bg-glass;
+  font-size: 70px;
+  border-radius: $radius-lg;
+  margin: 8px 0;
+  transition: background 0.6s ease;
+  transition: all 0.9s ease;
+  border: 2px solid $accent;
+}
+
+.option-label {
+  color: $text-main;
+  font-weight: 500;
+}
+
+.shutdown-option:hover { 
+  color: rgba(255, 100, 100, 1);
+  background: rgba(117, 56, 56, 0.7);
+  transition: color 0.6s ease;
+  transition: background 0.6s ease;
+}
+
+.reboot-option:hover {
+  color: rgba(168, 143, 255, 1);
+  background: rgba(115, 56, 117, 0.7);
+  transition: color 0.6s ease;
+  transition: background 0.6s ease;
+}
+
+.logout-option:hover {
+  color: rgba(255, 200, 100, 1);
+  background: rgba(117, 108, 56, 0.7);
+  transition: color 0.6s ease;
+  transition: background 0.6s ease;
+}
+
+.sleep-option:hover {
+  color: rgba(100, 200, 255, 1);
+  background: rgba(56, 117, 109, 0.7);
+  transition: color 0.6s ease;
+  transition: background 0.6s ease;
+}

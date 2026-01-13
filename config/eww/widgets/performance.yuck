@@ -1,0 +1,52 @@
+(defwidget perf-widget []
+  (box :class "perf-box" :space-evenly false :spacing 0 :halign "center"
+    ;; CPU
+    (box :class "perf-item" :orientation "vertical" :halign "center" :valign "center"
+      (circular-progress 
+        :class "perf-circle-cpu" 
+        :value cpu-usage 
+        :thickness 26
+        :clockwise true
+        :start-at 75
+      )
+      (label :class "perf-label" :text "CPU")
+      (label :class "perf-value" :text "${cpu-usage}%")
+    )
+    ;; RAM  
+    (box :class "perf-item" :orientation "vertical" :halign "center" :valign "center"
+      (circular-progress 
+        :class "perf-circle-ram" 
+        :value ram-usage 
+        :thickness 26
+        :clockwise true
+        :start-at 75
+      )
+      (label :class "perf-label" :text "RAM")
+      (label :class "perf-value" :text "${ram-usage}%")
+    )
+    ;; GPU
+    (box :class "perf-item" :orientation "vertical" :halign "center" :valign "center"
+      (circular-progress 
+        :class "perf-circle-gpu" 
+        :value gpu-usage 
+        :thickness 26
+        :clockwise true
+        :start-at 75
+      )
+      (label :class "perf-label" :text "GPU")
+      (label :class "perf-value" :text "${gpu-usage}%")
+    )
+  )
+)
+
+(defwidget CPU-widget []
+  (box :class "cpu-box")
+)
+
+(defwidget RAM-widget []
+  (box :class "ram-box")
+)
+
+(defwidget GPU-widget []
+  (box :class "gpu-box")
+)

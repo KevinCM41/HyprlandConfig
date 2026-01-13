@@ -1,0 +1,42 @@
+#power-profiles-daemon {
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#power-profiles-daemon.performance:hover {
+    background-color: #92ff84;
+    opacity: 1;
+}
+
+#power-profiles-daemon.performance {
+    background-color: #56ff3f;
+    color: #ffffff;
+    padding: 0px 9px;
+    opacity: 1;
+}
+
+#power-profiles-daemon.balanced:hover {
+    background-color: #83afff;
+    opacity: 1;
+}
+
+#power-profiles-daemon.balanced {
+    background-color: #4a90e2;
+    padding: 0px 6px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+#power-profiles-daemon.power-saver:hover {
+    background-color: #ff9683;
+    opacity: 1;
+}
+
+
+#power-profiles-daemon.power-saver {
+    background-color: #ff5639;
+    color: #ffffff;
+    padding: 0px 7px;
+    opacity: 1;
+}

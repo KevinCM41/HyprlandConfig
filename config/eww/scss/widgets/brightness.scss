@@ -1,0 +1,40 @@
+.brightness-widget {
+  background-color: rgba(30, 30, 46, 0.4);
+  border-radius: $radius-lg;
+  padding: 15px;
+}
+
+.brightness-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: $text-main;
+}
+
+.brightness-slider {
+  margin: 6px 0;
+}
+
+.brightness-slider trough {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  min-height: 10px;
+}
+
+.brightness-slider highlight {
+  background: linear-gradient(90deg, #e6acac, $accent);
+  border-radius: 5px;
+}
+
+.brightness-slider slider {
+  background-color: $accent;
+  border-radius: 50%;
+  min-width: 10px;
+  min-height: 4px;
+  margin: -5px;
+  margin-left: -6px;
+}
+
+.brightness-percentage {
+  font-size: 12px;
+  color: #cccccc;
+}

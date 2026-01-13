@@ -1,0 +1,9 @@
+#custom-media {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(229, 240, 255, 0.15);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 2px 8px;
+    margin: 2px 1px 2px 2px;
+    border-radius: 8px;
+}

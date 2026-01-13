@@ -1,0 +1,67 @@
+;; ======================
+;; Calendar
+;; ======================
+(defpoll today-date :interval "60s"
+  "~/.config/eww/scripts/today.sh"
+)
+
+(defpoll now-time :interval "1s"
+  "date +%H:%M:%S"
+)
+
+
+;; ======================
+;; Music Player
+;; ======================
+(defpoll music-status :interval "1s" "playerctl -p YoutubeMusic status 2>/dev/null || echo 'Stopped'")
+(defpoll music-title :interval "2s" "playerctl -p YoutubeMusic metadata title 2>/dev/null || echo 'No Title'")
+(defpoll music-artist :interval "2s" "playerctl -p YoutubeMusic metadata artist 2>/dev/null || echo 'No Artist'")
+(defpoll music-art :interval "5s" "~/.config/eww/scripts/get-album-art.sh")
+(defpoll music-position-sec :interval "1s" "playerctl -p YoutubeMusic metadata --format '{{position}}' 2>/dev/null | awk '{print int($1/1000000)}' || echo '0'")
+(defpoll music-length-sec :interval "2s" "playerctl -p YoutubeMusic metadata --format '{{mpris:length}}' 2>/dev/null | awk '{print int($1/1000000)}' || echo '1'")
+(defpoll music-position :interval "1s" "playerctl -p YoutubeMusic metadata --format '{{duration(position)}}' 2>/dev/null || echo '0:00'")
+(defpoll music-length :interval "2s" "playerctl -p YoutubeMusic metadata --format '{{duration(mpris:length)}}' 2>/dev/null || echo '0:00'")
+(defpoll music-volume :interval "2s" "playerctl -p YoutubeMusic volume 2>/dev/null | awk '{printf \"%.0f\", $1 * 100}' || echo '50'")
+
+
+;; ======================
+;; System Performance
+;; ======================
+(defpoll cpu-usage :interval "2s" "bash -c \"top -bn1 | grep 'Cpu(s)' | awk '{print int(100 - \\$8)}'\"")
+(defpoll ram-usage :interval "2s" "bash -c \"free | grep Mem | awk '{printf \\\"%.0f\\\", \\$3/\\$2 * 100.0}'\"")
+(defpoll gpu-usage :interval "2s" "bash -c \"cat /sys/class/hwmon/hwmon*/device/gpu_busy_percent 2>/dev/null | head -1 || echo 0\"" )
+
+
+;; ======================
+;; Weather
+;; ======================
+(defpoll EWW_WEATHER :interval "300s" :initial "Loading weather..." "/home/kevin/ansiweather/ansiweather -l Cartagena,CO -u metric -d false -a false -f 1")
+(defpoll EWW_DAY :interval "60s" "~/.config/eww/scripts/day.sh")
+
+
+;; ======================
+;; Brightness
+;; ======================
+(defpoll brightness-value :interval "1s" :initial "50" bash -c 'current=$(brightnessctl get); max=$(brightnessctl max); echo $((current * 100 / max))')
+
+
+;; ======================
+;; Power
+;; ======================
+(defvar power-menu-visible false)
+
+
+;; ======================
+;; Volume Controls
+;; ======================
+;; System/Output volume
+(deflisten system-volume
+  :initial "50"
+  "~/.config/eww/scripts/listen-system-volume.sh")
+
+;; ======================
+;; Microphone/Input volume
+;; ======================
+(deflisten mic-volume
+  :initial "50"
+  "~/.config/eww/scripts/listen-mic-volume.sh")

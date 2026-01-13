@@ -1,0 +1,39 @@
+window#waybar {
+    background-color: rgba(30, 30, 36, 0.5);
+    color: #ffffff;
+    font-family: "JetBrainsMono", monospace;}
+
+#left > *, #center > *, #right > * {
+  margin-left: 10px;
+  padding: 2px 20px;
+}
+
+#left > *:first-child,
+#center > *:first-child,
+#right > *:first-child {
+  margin-left: 0;
+}
+
+
+
+window#waybar.hidden {
+    opacity: 0;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}

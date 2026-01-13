@@ -1,0 +1,28 @@
+(defwidget weather-widget []
+  (box
+    :orientation "v"
+    :halign "start"
+    :valign "center"
+    ;; Greeting
+    (label 
+      :text "こんにちは、ケビン!" 
+      :halign "start"
+      :class "greeting")
+    ;; Current day
+    (label 
+      :text {EWW_DAY} 
+      :halign "start"
+      :class "day")
+    ;; Weather info
+    (box :orientation "h" :spacing 0 :halign "start"
+      (label :text "🌤" :halign "start" :class "weather-icon"))))
+
+(defwidget weather-widget-info []
+  (box
+    :orientation "h"
+    :halign "start"
+    :valign "center"
+    :spacing 6
+    ;; Weather info
+    (box :orientation "h" :spacing 0 :halign "start"
+      (label :text {EWW_WEATHER} :halign "start" :class "weather-info"))))

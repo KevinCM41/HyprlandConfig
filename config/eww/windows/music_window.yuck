@@ -1,0 +1,10 @@
+;; x "20" y "20px" width "280" height "420"
+;; Window with increased height
+(defwindow music-popup 
+  :monitor 0 
+  :anchor "top center" 
+  :geometry (geometry :x "1023px" :y "216px" :width "320" :height "330") 
+  :stacking "bottom" 
+  :exclusive false 
+  :focusable false 
+  (music))

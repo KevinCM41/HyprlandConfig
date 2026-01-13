@@ -1,0 +1,14 @@
+(defwidget brightness-control []
+  (box :class "brightness-widget"
+       :orientation "v"
+       :space-evenly false
+       :spacing 10
+    (label :text "🔆 Brightness ${brightness-value}%"
+           :class "brightness-label")
+    (scale :class "brightness-slider"
+           :value {brightness-value}
+           :min 1
+           :max 100
+           :orientation "h"
+           :onchange "brightnessctl set {}% && eww update brightness-value={}")
+    ))

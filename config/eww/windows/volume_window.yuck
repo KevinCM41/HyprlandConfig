@@ -1,0 +1,13 @@
+;; Volume Window
+(defwindow volume-window
+  :monitor 0
+  :geometry (geometry :x "20px"
+                      :y "20px"
+                      :width "300px"
+                      :height "250px"
+                      :anchor "top right")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (eventbox :onhoverlost "eww close volume-window"
+    (volume-control)))

@@ -1,0 +1,110 @@
+# Starship Prompt — Colloid Grey Dark
+
+# Character
+[character]
+success_symbol = "[⮞](#ffffff)"
+error_symbol   = "[⮞](#ff6b6b)"
+vicmd_symbol   = "[⮜](#cfcfcf)"
+
+# Username
+[username]
+show_always = true
+style_user = "bg:#7a7a9e fg:#ffffff bold"
+format = "[](fg:#7a7a9e)[ $user ]($style)[](fg:#7a7a9e bg:#5a5a7e)"
+
+# Hostname
+[hostname]
+ssh_only = false
+style = "bg:#5a5a7e fg:#ffffff bold"
+format = "[ $hostname ]($style)[](fg:#5a5a7e bg:#47475c)"
+
+# Directory (closes the chain)
+[directory]
+style = "bg:#47475c fg:#ffffff bold"
+read_only = " "
+read_only_style = "fg:#ffffff bg:#47475c"
+format = "[   $path ]($style)[ ](fg:#47475c bg:none)"
+
+# Git Branch (no powerline)
+[git_branch]
+symbol = " "
+style = "#cfcfcf bold"
+format = "[$symbol$branch]($style)"
+
+# Git Status
+[git_status]
+style = "#80ff76"
+conflicted = "⚔ "
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+up_to_date = "✓"
+untracked = "?"
+stashed = "*"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+format = " [$all_status$ahead_behind]($style)"
+
+# Package
+[package]
+symbol = "📦 "
+style = "#cfcfcf"
+format = " [$symbol$version]($style)"
+
+# NodeJS
+[nodejs]
+symbol = " "
+style = "#80ff76"
+format = " [$symbol$version]($style)"
+
+# Python
+[python]
+symbol = " "
+style = "#80ff76"
+format = " [$symbol$version]($style)"
+
+# Rust
+[rust]
+symbol = "🦀 "
+style = "#cfcfcf"
+format = " [$symbol$version]($style)"
+
+# Golang
+[golang]
+symbol = " "
+style = "#cfcfcf"
+format = " [$symbol$version]($style)"
+
+# PHP
+[php]
+symbol = " "
+style = "#cfcfcf"
+format = " [$symbol$version]($style)"
+
+# Time
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "#ffffff"
+format = " [ $time ]($style)"
+
+# Command duration
+[cmd_duration]
+min_time = 500
+format = " [🕒 $duration](#cfcfcf)"
+
+# Battery (icons only)
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡"
+discharging_symbol = "🔌"
+unknown_symbol = "?"
+empty_symbol = "🪫"
+
+# Root-level layout
+format = """\
+$username$hostname$directory$git_branch$git_status$nodejs$rust$python$php\
+$package$cmd_duration$line_break$character\
+"""

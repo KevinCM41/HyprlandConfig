@@ -1,0 +1,63 @@
+.web-nav-container {
+  background: $bg-dark;
+  border-radius: $radius-lg;
+  padding: 16px;
+  border: 2px solid $accent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #cdd6f4;
+  margin-bottom: 8px;
+}
+
+.button-container {
+  margin-top: 8px;
+}
+
+.nav-button {
+  background: rgb(48, 49, 71);
+  border-radius: 8px;
+  padding: 10px 16px;
+  min-height: 40px;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  color: #cdd6f4;
+}
+
+.nav-button:hover {
+  background: rgba(69, 71, 90, 0.9);
+  border-color: rgba(147, 153, 178, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:active {
+  background: rgba(89, 91, 110, 0.9);
+}
+
+/* Individual button colors */
+.claude-button:hover {
+  background: linear-gradient(135deg, rgba(213, 150, 102, 0.619), rgba(49, 50, 68, 0.9));
+  border-color: rgba(166, 123, 91, 0.6);
+}
+
+.chatgpt-button:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 153, 0.619), rgba(49, 50, 68, 0.9));
+  border-color: rgba(0, 255, 208, 0.4);
+}
+
+.perplexity-button:hover {
+  background: linear-gradient(135deg, rgba(94, 144, 252, 0.619), rgba(49, 50, 68, 0.9));
+  border-color: rgba(139, 150, 195, 0.6);
+}
+
+/* Button text styling */
+.nav-button label {
+  color: inherit;
+}
+
+.nav-button box {
+  color: inherit;
+}

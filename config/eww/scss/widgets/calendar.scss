@@ -1,0 +1,80 @@
+.calendar-box {
+  background: $bg-glass;
+  border-radius: $radius-lg;
+  padding: 6px;
+  padding-top: 20px;
+  color: #f8ebbc;
+  font-size: 16px;
+}
+
+.calendar-title {
+  color: $text-main;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+/* Calendar styling */
+calendar {
+  color: $accent;
+  font-size: 14px;
+  padding: 5px;
+}
+
+/* Calendar header (month/year and day names) */
+calendar.header {
+  color: $text-main;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $accent;
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+calendar.button:hover {
+  background-color: rgba(248, 235, 188, 0.1);
+}
+
+calendar.highlight {
+  color: $accent    ;
+  font-weight: bold;
+  border-radius: $radius-md;
+}
+
+calendar.button:backdrop {
+  color: rgba(248, 235, 188, 0.4);
+}
+
+calendar:selected {
+  color: #ffa149;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+/* Previous/next months' days */
+calendar:indeterminate,
+calendar.button:indeterminate {
+  color: rgba(248, 235, 188, 0.4);
+  /* same base color but dimmed */
+}
+
+/* Today highlight */
+calendar .today {
+  background-color: transparent;
+  /* no block */
+  color: $accent;
+  /* keep same text color */
+  font-weight: bold;
+  border: 2px solid $accent;
+  /* subtle outline */
+  border-radius: $radius-md;
+  /* rounded highlight */
+  /* space around number */
+}

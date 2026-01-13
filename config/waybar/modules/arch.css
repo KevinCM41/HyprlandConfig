@@ -1,0 +1,9 @@
+#custom-arch {
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+#custom-arch:hover {
+    color: #1793d1;
+    opacity: 1;
+}

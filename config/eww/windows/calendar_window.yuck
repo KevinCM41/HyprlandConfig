@@ -1,0 +1,12 @@
+;; x "530px" y "20px"
+
+(defwindow calendar-popup
+  :monitor 0
+  :anchor "top center"
+  :geometry (geometry :x "20px" :y "20px")
+  :exclusive false
+  :focusable false
+  :stacking "bottom"
+  :transition "slide_down"
+  (calendar-widget)
+)

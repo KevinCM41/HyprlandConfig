@@ -1,0 +1,205 @@
+/*
+* {
+
+    font-family: "Font Awesome 7 Free", "JetBrainsMono", monospace;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+}
+*/
+
+@import "modules/window.css";
+@import "modules/workspace.css";
+@import "modules/power.css";
+@import "modules/clock.css";
+@import "modules/battery.css";
+@import "modules/power_profiles.css";
+@import "modules/network.css";
+@import "modules/bluetooth.css";
+@import "modules/pulseaudio.css";
+@import "modules/tray.css";
+@import "modules/idle_inhibitor.css";
+@import "modules/ai.css";
+@import "modules/tooltip.css";
+@import "modules/notifications.css";
+@import "modules/arch.css";
+@import "modules/temperature.css";
+@import "modules/waybar_media.css";
+
+
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#cpu,
+#memory,
+#disk,
+#backlight,
+#pulseaudio,
+#wireplumber,
+#tray {
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 8px;
+}
+
+
+#mode,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 2px 4px;
+    margin: 2px;
+    color: #ffffff;
+}
+
+#window,
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: #534c33;
+    color: #000000;
+}
+
+#memory {
+    color: #ffffff;
+    margin-left: 2px;
+    padding-left: 2px;
+    font-size: 14px;
+}
+
+#disk {
+    background-color: #964B00;
+}
+
+#backlight {
+    background-color: #90b1b1;
+}
+
+#custom-wifi {
+  color: #a6e3a1;
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+#wireplumber {
+    background-color: #fff0f5;
+    color: #000000;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#temperature {
+    background-color: #f0932b;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #75f0b2;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+    border-radius: 7px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}
+
+#custom-perf{
+    font-size: 16px;
+    color: #ffffff;
+    margin-right: 6px;
+    margin-left: 6px;
+    opacity: 1;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#custom-perf:hover {
+    opacity: 1;
+    color: #feffa7;
+}
+
+#custom-music {
+    background-color: #3c3c59;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 6px;
+    opacity: 1;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#custom-music:hover {
+    background-color: #6d6d94;
+    opacity: 1;
+}
