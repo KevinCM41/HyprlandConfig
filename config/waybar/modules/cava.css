@@ -1,0 +1,9 @@
+#custom-cava {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    min-width: 20px;
+    padding: 0 10px;
+    margin-left: 4px;
+    border-bottom-left-radius: 10px;
+    font-family: monospace;
+}

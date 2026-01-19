@@ -25,7 +25,7 @@
 @import "modules/arch.css";
 @import "modules/temperature.css";
 @import "modules/waybar_media.css";
-
+@import "modules/cava.css";
 
 
 #mode {
@@ -41,7 +41,7 @@
 #wireplumber,
 #tray {
     padding: 2px 6px;
-    margin: 2px;
+    margin: 2px 2px 2px 2px;
     border-radius: 8px;
 }
 

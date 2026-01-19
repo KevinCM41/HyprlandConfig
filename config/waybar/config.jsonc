@@ -4,7 +4,7 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 3, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "custom/arch",
@@ -15,6 +15,7 @@
         "custom/media"
     ],
     "modules-center": [
+        "custom/cava",
         "clock"
     ],
     "modules-right": [
@@ -255,7 +256,14 @@
         "format": "{icon} {temperatureC}°C",
         "critical-threshold": 90,
         "format-icons": ["","","","",""]	
-    }
+    },
+
+    "custom/cava": {
+    "exec": "~/.config/waybar/scripts/cava.sh",
+    "return-type": "text",
+    "format": "{}",
+    "on-click": "playerctl play-pause"
+}
 /*    "custom/music": {
     "format": "🎵",
     "tooltip": false,

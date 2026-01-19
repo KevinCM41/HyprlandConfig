@@ -2,7 +2,7 @@
     font: "JetBrainsMono Nerd Font 10";
     
     /* Color palette matching Wofi */
-    bg-color: rgba(22, 22, 29, 0.5);
+    bg-color: rgba(22, 22, 29, 1);
     fg-color: #FFFFFFFF;
     border-color: rgba(34, 34, 46, 0.5);
     input-bg: rgba(31, 31, 44, 0.6);

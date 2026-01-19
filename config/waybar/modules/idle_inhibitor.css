@@ -3,12 +3,11 @@
     background-color: rgba(229, 240, 255, 0.15);
     border-radius: 7px;
     padding: 5px;
-    margin: 2px 2px 2px 0px;
+    margin: 2px 2px 2px 2px;
     border-radius: 8px;
     font-size: 16px;
     color: #ffffff;
     opacity: 1;
-/*    transition: background-color 0.3s ease, opacity 0.3s ease; */
 }
 
 #idle_inhibitor:hover {

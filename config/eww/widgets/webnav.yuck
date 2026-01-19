@@ -13,7 +13,7 @@
       
       (button
         :class "nav-button claude-button"
-        :onclick "xdg-open https://claude.ai &"
+        :onclick "claude-desktop &"
         (box
           :orientation "horizontal"
           :spacing 8
@@ -22,7 +22,7 @@
       
       (button
         :class "nav-button chatgpt-button"
-        :onclick "xdg-open https://chatgpt.com &"
+        :onclick "snap run chatgpt-desktop &"
         (box
           :orientation "horizontal"
           :spacing 8
@@ -31,7 +31,7 @@
       
       (button
         :class "nav-button perplexity-button"
-        :onclick "xdg-open https://www.perplexity.ai &"
+        :onclick "snap run perplexity-desktop &"
         (box
           :orientation "horizontal"
           :spacing 8

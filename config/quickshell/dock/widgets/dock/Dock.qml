@@ -111,14 +111,14 @@ Scope {
           anchors.topMargin: config.data.position == "top" ? 6 : 0
           
           // Glassmorphism effect
-          color: "#CC1A1A1A"
+          color: "#1A1A1A"
           radius: config.data.iconSize / 2
           border.width: 1
           border.color: "#33FFFFFF"
           
           gradient: Gradient {
-            GradientStop { position: 0.0; color: "#CC2A2A2A" }
-            GradientStop { position: 1.0; color: "#CC1A1A1A" }
+            GradientStop { position: 0.0; color: "#2A2A2A" }
+            GradientStop { position: 1.0; color: "#1A1A1A" }
           }
 
           // Slide animation based on alwaysVisible setting
