@@ -27,6 +27,7 @@
 @import "modules/waybar_media.css";
 @import "modules/cava.css";
 @import "modules/dot.css";
+@import "modules/language.css";
 
 
 #mode {
@@ -112,15 +113,6 @@ label:focus {
 
 #mpd.paused {
     background-color: #51a37a;
-}
-
-#language {
-    background: #000000;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    border-bottom-right-radius: 10px;
-    padding-right: 13px;
 }
 
 #keyboard-state {

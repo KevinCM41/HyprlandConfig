@@ -1,0 +1,11 @@
+#language {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom-right-radius: 14px;
+    border-top: #000000 4px solid;
+    border-right: transparent 3px solid;
+    padding-right: 13px;
+    opacity: 1;
+}
