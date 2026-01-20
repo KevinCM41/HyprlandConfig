@@ -1,6 +1,11 @@
 #temperature {
+    background-color: #f0932b;
     font-size: 14px;
     padding: 2px 6px;
     margin: 2px;
     border-radius: 8px;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
 }

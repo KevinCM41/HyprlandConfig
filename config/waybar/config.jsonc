@@ -15,14 +15,15 @@
         "custom/media"
     ],
     "modules-center": [
-        "custom/cava",
-        "clock"
+        "custom/notifications",
+        "clock",
+        "custom/dot",
+        "hyprland/language"
     ],
     "modules-right": [
-        //"memory",
+//        "memory",
         "temperature",
-        "network",
-        "custom/notifications",
+//        "network",
         "bluetooth",
         "custom-wifi",
         "mpd",
@@ -72,7 +73,7 @@
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "hyprland/scratchpad": {
+    "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],
@@ -126,9 +127,24 @@
 
     },
 
-    /*"memory": {
+    "memory": {
         "format": "{}% 󰍛"
-    },*/
+    },
+
+    "hyprland/language": {
+	    "format": "{short}"
+    },
+
+    "disk": {
+	"interval": 30,
+	"format": "{percentage_used}% "
+},
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
 
     "battery": {
         "states": {
@@ -237,7 +253,7 @@
         "on-click": "~/.config/eww/scripts/toggle-web-nav.sh"
     },
     "custom/notifications": {
-        "format": "󰂚",
+        "format": "",
         "tooltip": false,
         "on-click": "swaync-client -t",
         "on-click-right": "swaync-client -C",
@@ -251,19 +267,19 @@
         "on-click": "rofi -show drun"
     },
 
+    "custom/dot": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+
     "temperature": {
         "interval": 10,
         "format": "{icon} {temperatureC}°C",
         "critical-threshold": 90,
         "format-icons": ["","","","",""]	
-    },
+    }
 
-    "custom/cava": {
-    "exec": "~/.config/waybar/scripts/cava.sh",
-    "return-type": "text",
-    "format": "{}",
-    "on-click": "playerctl play-pause"
-}
 /*    "custom/music": {
     "format": "🎵",
     "tooltip": false,

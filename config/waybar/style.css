@@ -26,6 +26,7 @@
 @import "modules/temperature.css";
 @import "modules/waybar_media.css";
 @import "modules/cava.css";
+@import "modules/dot.css";
 
 
 #mode {
@@ -74,7 +75,7 @@ label:focus {
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: transparent;
 }
 
 #backlight {
@@ -96,14 +97,6 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#temperature {
-    background-color: #f0932b;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-
 #mpd {
     background-color: #66cc99;
     color: #2a5c45;
@@ -122,11 +115,12 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom-right-radius: 10px;
+    padding-right: 13px;
 }
 
 #keyboard-state {
