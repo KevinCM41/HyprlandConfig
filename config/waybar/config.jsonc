@@ -15,7 +15,7 @@
         "custom/media"
     ],
     "modules-center": [
-        "custom/notifications",
+        "custom/notification",
         "clock",
         "custom/dot",
         "hyprland/language"
@@ -252,14 +252,6 @@
         "tooltip": false,
         "on-click": "~/.config/eww/scripts/toggle-web-nav.sh"
     },
-    "custom/notifications": {
-        "format": "",
-        "tooltip": false,
-        "on-click": "swaync-client -t",
-        "on-click-right": "swaync-client -C",
-        "on-click-middle": "swaync-client -d",
-        "interval": 1
-    },
 
     "custom/arch": {
         "format": "",
@@ -278,7 +270,28 @@
         "format": "{icon} {temperatureC}°C",
         "critical-threshold": 90,
         "format-icons": ["","","","",""]	
-    }
+    },
+    
+    "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='14pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
 
 /*    "custom/music": {
     "format": "🎵",

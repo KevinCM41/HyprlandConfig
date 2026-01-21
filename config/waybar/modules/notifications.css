@@ -1,12 +1,10 @@
-#custom-notifications {
+#custom-notification {
     background-color: rgb(0, 0, 0);
-    font-size: 16px;
     color: #ffffff;
     border-bottom-left-radius: 14px;
     border-top: #000000 4px solid;
     border-left: transparent 3px solid;
-    padding-left: 16px;
-    padding-right: 6px;
+    padding: 0px 6px 2px 16px;
     opacity: 1;
 }
 

@@ -33,6 +33,10 @@
   "text-empty": "No Notifications",
   "script-fail-notify": true,
   "scripts": {
+    "notification-received": {
+      "exec": "$HOME/.config/swaync/scripts/on-notification.sh",
+      "run-on": "receive"
+    },
     "example-script": {
       "exec": "echo 'Do something...'",
       "urgency": "Normal"
